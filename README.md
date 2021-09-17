@@ -20,9 +20,12 @@ cd XQA/src
 bash preprocess.sh
 ```
 Some tips in extracting the syntax:
+
 (1) Do not turn on the `--fp16` flag since fp16 is not supported by stanza.
+
 (2) Sometimes stanza will collapse and the program keeps printing <skip this example> for all samples, you need to stop the processing, remove the corrupted file and restart the program.
-(3) If the extracting syntax is not working, feel free to drop me an email and I can share the syntax files.
+    
+(3) If your extracting syntax is not working, feel free to drop me an email and I can share the syntax files.
 
 ### Training and Inference
 ```sh
