@@ -26,7 +26,7 @@ You can download the model trained by us (with mBERT). You can find the results 
 
 Recently I am quite busy with the internship and deadline thus the code is still a bit messy. I will come back for the refinement later.
 
-# Citation
+## Citation
 If you feel this project helpful to your research, please cite our work.
 ```
 @inproceedings{yu-etal-2021-cosy,
