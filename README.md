@@ -9,7 +9,7 @@ This repository contains the code for the following paper:
 * tensorboardX 1.8
 * prettytable 0.7.2
 
-## Cross-lingual Question Answering (MLQA and XQuad)
+## Cross-lingual Question Answering (MLQA and XQuAD)
 
 ### Dowload data
 - Step 1: Download training dataset SQuAD via this link (https://drive.google.com/file/d/10STENBjVF3XaCKvzBudtC32B4RWzOwyg/view?usp=sharing) (we rename the file name), and store them in directory `/XQA/data/train`.
@@ -21,6 +21,26 @@ cd XQA/src
 bash run.sh
 ```
 
-### COSY cross-lingual question answering model trained by me
+### QA model trained by me
 You can download the model trained by us (with mBERT). You can find the results we reported in our paper. () 
 
+# Citation
+If you feel this project helpful to your research, please cite our work.
+```
+@inproceedings{yu-etal-2021-cosy,
+    title = "{COSY}: {CO}unterfactual {SY}ntax for Cross-Lingual Understanding",
+    author = "Yu, Sicheng  and
+      Zhang, Hao  and
+      Niu, Yulei  and
+      Sun, Qianru  and
+      Jiang, Jing",
+    booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.acl-long.48",
+    doi = "10.18653/v1/2021.acl-long.48",
+    pages = "577--589",
+}
+```
