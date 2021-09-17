@@ -4,6 +4,7 @@ This repository contains the code for the following paper:
 
 ## Requirement
 * torch 1.2.0
+* stanza 1.0.1
 * transformers 3.0.2
 * apex 0.1
 * tensorboardX 1.8
@@ -11,9 +12,17 @@ This repository contains the code for the following paper:
 
 ## Cross-lingual Question Answering (MLQA and XQuAD)
 
-### Dowload data
+### Preprocessing
 - Step 1: Download training dataset SQuAD via this link (https://drive.google.com/file/d/10STENBjVF3XaCKvzBudtC32B4RWzOwyg/view?usp=sharing) (we rename the file name), and store them in directory `/XQA/data/train`.
-- Step 2: Download our extracted syntax feature via this link (https://drive.google.com/drive/folders/12Z6LcjUSYzJACMjIMUJ19DObVccVLEQu?usp=sharing), and store them in directory `/XQA/data/cache`. These files is a bit large, please reserve about 20GB for it.
+- Step 2: Extract the syntax and process the example
+```sh
+cd XQA/src
+bash preprocess.sh
+```
+Some tips in extracting the syntax:
+(1) Do not turn on the `--fp16` flag since fp16 is not supported by stanza.
+(2) Sometimes stanza will collapse and the program keeps printing <skip this example> for all samples, you need to stop the processing, remove the corrupted file and restart the program.
+(3) If the extracting syntax is not working, feel free to drop me an email and I can share the syntax files.
 
 ### Training and Inference
 ```sh
