@@ -1,5 +1,5 @@
 # COSY
-This repository contains the code for the following paper:
+This repository contains the code for our ACL 2021 paper:
 * Sicheng Yu, Hao Zhang, Yulei Niu, Qianru Sun, Jing Jiang "COSY: COunterfactual SYntax for Cross-Lingual Understanding" (https://aclanthology.org/2021.acl-long.48/)
 
 ## Requirement
