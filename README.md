@@ -1,6 +1,6 @@
 # COSY
 This repository contains the code for the following paper:
-* Sicheng Yu, Hao Zhang, Yulei Niu, Qianru Sun, Jing Jiang *"COSY: COunterfactual SYntax for Cross-Lingual Understanding (https://aclanthology.org/2021.acl-long.48/)
+* Sicheng Yu, Hao Zhang, Yulei Niu, Qianru Sun, Jing Jiang "COSY: COunterfactual SYntax for Cross-Lingual Understanding" (https://aclanthology.org/2021.acl-long.48/)
 Recently I am quite busy with the internship and deadline thus the code is still a bit messy. I will come back for the refinement later.
 ## Requirement
 * torch 1.2.0
