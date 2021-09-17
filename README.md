@@ -1,7 +1,7 @@
 # COSY
 This repository contains the code for the following paper:
 * Sicheng Yu, Hao Zhang, Yulei Niu, Qianru Sun, Jing Jiang "COSY: COunterfactual SYntax for Cross-Lingual Understanding" (https://aclanthology.org/2021.acl-long.48/)
-Recently I am quite busy with the internship and deadline thus the code is still a bit messy. I will come back for the refinement later.
+
 ## Requirement
 * torch 1.2.0
 * transformers 3.0.2
@@ -23,6 +23,8 @@ bash run.sh
 
 ### QA model trained by me
 You can download the model trained by us (with mBERT). You can find the results we reported in our paper. (https://drive.google.com/drive/folders/1SR1mnssCugo81LuucykFixl00LmO347T?usp=sharing) 
+
+Recently I am quite busy with the internship and deadline thus the code is still a bit messy. I will come back for the refinement later.
 
 # Citation
 If you feel this project helpful to your research, please cite our work.
