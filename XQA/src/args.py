@@ -94,6 +94,7 @@ def get_args():
         help="The maximum number of tokens for the question. Questions longer than this will "
              "be truncated to this length.",
     )
+    parser.add_argument("--args.do_preprocess", action="store_true")
     parser.add_argument("--do_train", action="store_true", help="Whether to run training.")
     parser.add_argument("--do_eval", action="store_true", help="Whether to run eval on the dev set.")
     parser.add_argument("--do_test", action="store_true", help="Whether to run test on the test set.")
@@ -259,60 +260,34 @@ Rel2idx = {
     'xcomp': 38
 }
 
-#
-preprocessing_data = [('dev','en'),
-                    #   ('dev','es'),
-                    #   ('dev','de'),
-                    #   ('dev','ar'),
-                    #   ('dev','hi'),
-                    #   ('dev','vi'),
-                    #   ('dev','zh'),
-                    # ('xquad', 'en'),
-                    # ('xquad', 'ar'),
-                    # ('xquad', 'de'),
-                    # ('xquad', 'el'),
-                    # ('xquad', 'es'),
-                    # ('xquad', 'hi'),
-                    # ('xquad', 'ru'),
-                    # ('xquad', 'tr'),
-                    # ('xquad', 'vi'),
+
+
+preprocessing_data = [('train', 'en'),
+                      ('dev','en'),
+                      ('test','en'),
+                      ('test','es'),
+                      ('test','de'),
+                      ('test','ar'),
+                      ('test','hi'),
+                      ('test','vi'),
+                      ('test','zh'),
+                      ('dev','es'),
+                      ('dev','de'),
+                      ('dev','ar'),
+                      ('dev','hi'),
+                      ('dev','vi'),
+                      ('dev','zh'),
+                    ('xquad', 'en'),
+                    ('xquad', 'ar'),
+                    ('xquad', 'de'),
+                    ('xquad', 'el'),
+                    ('xquad', 'es'),
+                    ('xquad', 'hi'),
+                    ('xquad', 'ru'),
+                    ('xquad', 'tr'),
+                    ('xquad', 'vi'),
                     ('xquad', 'zh'),
 ]
-
-# preprocessing_data = [('test','en'),
-#                       ('test','es'),
-#                       ('test','de'),
-#                       ('test','ar'),
-#                       ('test','hi'),
-#                       ('test','vi'),
-#                       ('test','zh'),
-# ]
-
-# preprocessing_data = [('dev','en'),
-#                       ('test','en'),
-#                       ('test','es'),
-#                       ('test','de'),
-#                       ('test','ar'),
-#                       ('test','hi'),
-#                       ('test','vi'),
-#                       ('test','zh'),
-#                       ('dev','es'),
-#                       ('dev','de'),
-#                       ('dev','ar'),
-#                       ('dev','hi'),
-#                       ('dev','vi'),
-#                       ('dev','zh'),
-#                     ('xquad', 'en'),
-#                     ('xquad', 'ar'),
-#                     ('xquad', 'de'),
-#                     ('xquad', 'el'),
-#                     ('xquad', 'es'),
-#                     ('xquad', 'hi'),
-#                     ('xquad', 'ru'),
-#                     ('xquad', 'tr'),
-#                     ('xquad', 'vi'),
-#                     ('xquad', 'zh'),
-# ]
 
 large_mismatch = []
 for i in range(15,50):

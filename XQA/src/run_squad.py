@@ -154,14 +154,15 @@ def main():
             raise ImportError("Please install apex from https://www.github.com/nvidia/apex to use fp16 training.")
 
     # Data preprocessing with the dev and test data firstly (prevent fp16 issue when facing Stanza)
-    # for set_name, lang in preprocessing_data:
-    #     logger.info("Now process dev/test/xquad data: {}/{}".format(set_name, lang))
-    #     dataset, examples, features = load_and_cache_examples(args,
-    #                                                       tokenizer,
-    #                                                       evaluate=set_name,
-    #                                                       context_lang=lang,
-    #                                                       query_lang=lang,
-    #                                                       output_examples=True)
+    if args.do_preprocess:
+        for set_name, lang in preprocessing_data:
+            logger.info("Now process train/dev/test/xquad data: {}/{}".format(set_name, lang))
+            dataset, examples, features = load_and_cache_examples(args,
+                                                              tokenizer,
+                                                              evaluate=set_name,
+                                                              context_lang=lang,
+                                                              query_lang=lang,
+                                                              output_examples=True)
 
 
     # Training
